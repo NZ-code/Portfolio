@@ -1,0 +1,21 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #0A0A0A;
+    
+}
+
+
+@font-face {
+    font-family: YourFontFamily;
+    src: url(assets/fonts/Mont-Regular.ttf) format("truetype");;
+}
+@font-face {
+    font-family: YourFontFamily;
+    src: url(assets/fonts/Mont-Bold.ttf) format("truetype");
+    font-weight: bold;
+}

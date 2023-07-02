@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.cover-container{
+    background-image: url('src/assets/img/cover4x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.item{
+    border :1px;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: red;
+}
+.cover-item{
+    grid-column: 2/10;
+}

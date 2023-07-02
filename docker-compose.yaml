@@ -1,0 +1,8 @@
+version: '3'
+services:
+  frontend:
+    image: portfolio-frontend
+    build: frontend/
+    ports:
+      - 4200:4200
+    

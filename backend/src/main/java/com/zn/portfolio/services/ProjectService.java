@@ -4,7 +4,6 @@ import com.zn.portfolio.entities.Project;
 import com.zn.portfolio.exceptions.ProjectNotFoundException;
 import com.zn.portfolio.repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

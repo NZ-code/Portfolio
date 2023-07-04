@@ -1,0 +1,17 @@
+footer{
+    font-family: MontFamily;
+}
+.footer-options-links{
+    display: flex;
+}
+.footer-options-links div{
+
+    margin-right: 48px;
+    text-align: center;
+    font-family: MontFamily;
+    
+    font-size: 14px;
+}
+.footer-links{
+    color: rgba(255,255,255,0.5);
+}

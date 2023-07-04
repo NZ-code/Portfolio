@@ -1,0 +1,42 @@
+package com.zn.portfolio.services;
+
+import com.zn.portfolio.entities.$entity_name;
+
+
+import com.zn.portfolio.repositories.$repository_name;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+@Service
+public class $service_name {
+
+    private $repository_name $repository_name_lower;
+
+    @Autowired
+    public ${service_name}($repository_name $repository_name_lower){
+        this.$repository_name_lower = $repository_name_lower;
+    }
+    public List<$entity_name> get${entity_name_plural}() {
+        return $repository_name_lower.findAll();
+    }
+
+    public $entity_name get${entity_name}(String id) {
+        return $repository_name_lower.findById(Integer.valueOf(id))
+                .orElseThrow(() ->  new RuntimeException());
+    }
+
+    public void create${entity_name}($entity_name $entity_name_lower) {
+        ${repository_name_lower}.save($entity_name_lower);
+    }
+
+    public void delete${entity_name}(String id) {
+        $repository_name_lower.deleteById(Integer.valueOf(id));
+    }
+    //ToDo fix update
+    public void update${entity_name}(String id, $entity_name $entity_name_lower) {
+        $entity_name_lower.setId(Long.valueOf(id));
+        $repository_name_lower.save($entity_name_lower);
+    }
+}

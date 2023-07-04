@@ -1,0 +1,10 @@
+package $full_package_name.repositories;
+
+
+import com.zn.portfolio.entities.$entity_name;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface $repository_name  extends JpaRepository<$entity_name, Integer> {
+}

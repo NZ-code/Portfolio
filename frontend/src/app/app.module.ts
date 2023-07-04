@@ -7,12 +7,18 @@ import { CoverComponent } from './cover/cover.component';
 import { HeaderComponent } from './header/header.component';
 
 import { MatButtonModule } from '@angular/material/button';
+import { AboutComponent } from './about/about.component';
+import { SkillsComponent } from './skills/skills.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoverComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent,
+    SkillsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

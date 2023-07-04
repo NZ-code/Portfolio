@@ -1,0 +1,45 @@
+package  $full_package_name.controllers;
+
+import $full_package_name.entities.${entity_name};
+import $full_package_name.services.${service_name};
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+
+@RestController
+public class ${controller_name} {
+
+    private ${service_name} ${service_name_lower};
+
+    @Autowired
+    public ${controller_name}(${service_name} ${service_name_lower}){
+        this.${service_name_lower} = ${service_name_lower};
+    }
+
+    @GetMapping(${API_URI})
+    public List<${entity_name}> get${entity_name_plural}(){
+        return ${service_name_lower}.get${entity_name_plural}();
+    }
+
+    @GetMapping(${API_URI_SPECIFIC})
+    public ${entity_name} get${entity_name}(@PathVariable(name=${API_ID_PATH_VAR}) String id){
+        return ${service_name_lower}.get${entity_name}(id);
+    }
+    @PostMapping(${API_URI})
+    public void save${entity_name}(@RequestBody ${entity_name} ${entity_name_lower}){
+        ${service_name_lower}.create${entity_name}(${entity_name_lower});
+    }
+    @DeleteMapping(${API_URI_SPECIFIC})
+    public void delete${entity_name}(@PathVariable(name = ${API_ID_PATH_VAR}) String id){
+        ${service_name_lower}.delete${entity_name}(id);
+    }
+    @PutMapping(${API_URI_SPECIFIC})
+    public void update${entity_name}(@PathVariable(name = ${API_ID_PATH_VAR}) String id,
+                              @RequestBody ${entity_name} ${entity_name_lower}){
+
+        ${service_name_lower}.update${entity_name}(id, ${entity_name_lower});
+    }
+
+}

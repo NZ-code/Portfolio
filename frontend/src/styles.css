@@ -9,13 +9,12 @@ html, body {
     
 }
 
-
 @font-face {
-    font-family: YourFontFamily;
+    font-family: MontFamily;
     src: url(assets/fonts/Mont-Regular.ttf) format("truetype");;
 }
 @font-face {
-    font-family: YourFontFamily;
+    font-family: MontFamily;
     src: url(assets/fonts/Mont-Bold.ttf) format("truetype");
     font-weight: bold;
 }

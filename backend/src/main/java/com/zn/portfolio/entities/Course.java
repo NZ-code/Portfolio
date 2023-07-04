@@ -11,10 +11,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Skill {
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
-    private String name;
+
+    String name;
+	String link;
+	
+
 }

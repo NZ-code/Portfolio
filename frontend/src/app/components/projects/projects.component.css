@@ -1,0 +1,61 @@
+
+#projects-header{
+    color: rgba(255,255,255, 0.8999999761581421);
+    font-size: 64px;
+    font-family: Mont;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.projects-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    z-index: -1;
+    
+}
+
+.project{
+    width: 300px;
+    border-radius: 24px;
+    background: rgba(18, 18, 18, 0.50);
+    backdrop-filter: blur(40px);
+    overflow: hidden; /* Ensures image respects border radius */
+}
+
+
+.project-header{
+    color: #FFF;
+    font-size: 32px;
+    font-family: MontFamily;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0;
+}
+
+.project-skills{
+    display: flex;
+    gap: 10px;
+    
+}
+.project-skills p{
+    padding: 0;
+    margin: 3px;
+}
+.project-skill{
+    border-radius: 4px;
+    background: #F8B3E6;
+    color: black;
+    font-family: MontFamily;
+    margin-bottom: 12px;
+}
+.project-card-content{
+    margin: 20px;
+}

@@ -1,0 +1,55 @@
+.footer-grid{
+    
+    display: grid;
+    grid-template-columns: repeat(11,1fr);   
+
+}
+
+footer{
+    font-family: MontFamily;
+    margin-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(16, 15, 15);
+}
+.footer{
+    grid-column: 2/11;
+}
+.footer-options-links{
+    display: flex;
+    
+    margin-bottom: 32px;
+}
+.footer-options-links div{
+
+    margin-right: 48px;
+    text-align: center;
+    font-family: MontFamily;
+    
+    font-size: 14px;
+
+}
+.footer-options-links div:hover{
+
+    color:white;
+}
+
+.footer-links{
+    color: rgba(255,255,255,0.5);
+}
+#email{
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    
+}
+.icons svg{
+    margin-bottom: 80px;
+    opacity:0.5;
+}
+.icons svg:hover{
+    opacity:1;
+    
+}

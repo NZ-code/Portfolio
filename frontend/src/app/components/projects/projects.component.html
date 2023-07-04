@@ -1,0 +1,19 @@
+<div id="projects-section">
+    <p id="projects-header">{{title}}</p>
+    <div class="projects-wrapper">
+        <div class="projects">
+            <div class="project" *ngFor = "let project of projects">
+                <img src="assets/img/Case card.png">
+                <div class="project-card-content">
+                    <div class="project-skills">
+                        <div class="project-skill" *ngFor="let skill of project.skills">
+                            <p>{{skill}}</p>
+                        </div>
+                    </div>
+                    <p class="project-header">{{project.name}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

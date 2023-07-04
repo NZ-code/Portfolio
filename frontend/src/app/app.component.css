@@ -9,18 +9,8 @@ html, body {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
 }
-.cover-item-background{
-    background-image: url('src/assets/img/cover4x.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-.item{
-    border :1px;
-    border-width: 2px;
-    border-style: dashed;
-    border-color: red;
-}
+
+
 .content-item{
     grid-column: 2/11;
 }

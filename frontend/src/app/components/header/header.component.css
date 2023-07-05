@@ -1,5 +1,6 @@
 .protfolio-header{
     width: 100%;
+    
     top: 0;
     position: fixed;
     font-family: MontFamily;
@@ -11,12 +12,10 @@
     backdrop-filter: blur(32px);
     z-index: 2;
 }
-#header-name{
-    color: white;
-}
+
 
 .header-grid{
-    
+    max-width: 1180px;
     display: grid;
     grid-template-columns: repeat(11,1fr);   
 
@@ -30,15 +29,23 @@
 
 .header-options-links{
     display: flex;
-    color: rgba(255, 255,255, 0.50);
-}
-.header-options-links div{
-
-    margin-right: 48px;
-    text-align: center;
+    
     
 }
-.header-options-links div:hover{
+.header-options-links div{
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+  
+
+    
+}
+.header-link{
+    color: rgba(255, 255,255, 0.50);
+
+    text-decoration: none;
+}
+.header-link:hover{
 
     color: white;
     

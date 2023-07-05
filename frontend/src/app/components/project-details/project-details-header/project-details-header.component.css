@@ -1,7 +1,31 @@
 .project-details-header{
-    
-    margin-top: 112px;
+    font-family: MontFamily;
+    margin-top: 172px;
+    margin-bottom: 60px;
     display: flex;
+
+}
+#project-name{
+    margin-top: 34px;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 75px;
+}
+#project-name p {
+    margin: 0;
+}
+#description{
+    margin-left: 20px;
+    align-self: center;
+}
+#project-description{
+    font-size: 16px;
+    color: #b3b3b3;
+}
+#date{
+    margin-top: 34px;
+    font-size: 16px;
+    color: #808080;
 }
 .project-skills{
     display: flex;

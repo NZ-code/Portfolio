@@ -7,7 +7,7 @@
 
 footer{
     font-family: MontFamily;
-    margin-top: 35px;
+
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: rgb(16, 15, 15);
@@ -39,6 +39,15 @@ footer{
 
 .footer-links{
     color: rgba(255,255,255,0.5);
+    
+}
+.footer-links a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-links a:hover{
+       color:white;
 }
 #email{
     color: #FFF;

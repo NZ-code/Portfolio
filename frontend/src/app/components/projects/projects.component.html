@@ -2,7 +2,7 @@
     <p id="projects-header">{{title}}</p>
     <div class="projects-wrapper">
         <div class="projects">
-            <div class="project" *ngFor = "let project of projects">
+            <div routerLink='/project/{{project.id}}'   class="project" *ngFor = "let project of projects">
                 <img src="assets/img/Case card.png">
                 <div class="project-card-content">
                     <div class="project-skills">

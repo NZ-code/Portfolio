@@ -2,7 +2,7 @@
     
     display: grid;
     grid-template-columns: repeat(11,1fr);   
-
+    
 }
 
 footer{
@@ -11,9 +11,12 @@ footer{
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: rgb(16, 15, 15);
+   
+ 
 }
 .footer{
     grid-column: 2/11;
+    
 }
 .footer-options-links{
     display: flex;

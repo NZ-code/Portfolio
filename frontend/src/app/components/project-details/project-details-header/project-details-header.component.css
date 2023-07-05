@@ -1,0 +1,26 @@
+.project-details-header{
+    
+    margin-top: 112px;
+    display: flex;
+}
+.project-skills{
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+ 
+}
+.project-skill{
+    border-radius: 4px;
+    background: #F8B3E6;
+    color: black;
+    font-family: MontFamily;
+ 
+    height:fit-content;
+
+}
+.project-skill p{
+    margin: 0;
+    padding: 6px;
+
+}

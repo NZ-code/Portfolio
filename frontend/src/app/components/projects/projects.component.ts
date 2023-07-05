@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Project } from './project';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',

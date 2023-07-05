@@ -11,6 +11,9 @@ import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { ProjectDetailsHeaderComponent } from './components/project-details/project-details-header/project-details-header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
     AboutComponent,
     SkillsComponent,
     FooterComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectDetailsComponent,
+    MainPageComponent,
+    ProjectDetailsHeaderComponent
   ],
   imports: [
     BrowserModule,

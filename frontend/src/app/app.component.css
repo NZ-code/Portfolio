@@ -9,6 +9,7 @@ html, body {
     grid-template-rows: 1fr auto;
     min-height: 100%;
 }
+
 .container{
     
     display: grid;
@@ -19,7 +20,7 @@ html, body {
 
 .content-item{
     grid-column: 2/11;
-    border: 1px solid red;
+    border: 1px solid tan;
     display: flex;
     justify-content: center;
 }

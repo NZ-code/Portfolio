@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,12 +28,13 @@ import { ProjectDetailsHeaderComponent } from './components/project-details/proj
     ProjectsComponent,
     ProjectDetailsComponent,
     MainPageComponent,
-    ProjectDetailsHeaderComponent
+    ProjectDetailsHeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@ import java.util.List;
 import static com.zn.portfolio.utils.Constants.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class SkillController {
 
     private SkillService skillService;
@@ -43,5 +44,14 @@ public class SkillController {
                               @RequestBody Skill skill){
         skillService.updateProject(id, skill);
     }
-
+    //--------------------------------------------------------------------------------///
+    @GetMapping(API_SPECIFIC_PROJECT_URI + "/skills")
+    public List<Skill> getSkillsFromProject(@PathVariable(name = PROJECT_ID_PATH_VAR) String projectId){
+        return skillService.getSkillsByProjectId(projectId);
+    }
+    @PostMapping(API_SPECIFIC_PROJECT_URI + "/skills")
+    public void postSkillTOProject(@PathVariable(name = PROJECT_ID_PATH_VAR) String projectId,
+                                          @RequestBody Skill skill){
+        skillService.postSkillByProjectId(skill, projectId);
+    }
 }

@@ -1,7 +1,10 @@
 package com.zn.portfolio.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -9,6 +12,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "projects")
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -17,5 +21,10 @@ public class Project {
 
     private String name;
     private String description;
+
+
+    @OneToMany(mappedBy = "project")
+    @JsonManagedReference
+    private List<Skill> skills;
 
 }

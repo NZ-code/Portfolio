@@ -6,6 +6,8 @@
 }
 
 footer{
+    display: flex;
+    justify-content: center;
     font-family: MontFamily;
 
     padding-top: 20px;
@@ -16,7 +18,8 @@ footer{
 }
 .footer{
     grid-column: 2/11;
-    
+    width: 1180px;
+
 }
 .footer-options-links{
     display: flex;

@@ -10,6 +10,7 @@ import java.util.List;
 import static com.zn.portfolio.utils.Constants.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProjectController {
 
     private ProjectService projectService;

@@ -1,10 +1,12 @@
 package com.zn.portfolio.services;
 
 import com.zn.portfolio.entities.Project;
-import com.zn.portfolio.exceptions.ProjectNotFoundException;
+
 import com.zn.portfolio.repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +25,9 @@ public class ProjectService {
     }
     public Project getProject(String id) {
         Project project = projectRepository.findById(Integer.valueOf(id)).orElseThrow(
-                ()->new ProjectNotFoundException()
+                ()->new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "this project not found"
+                )
         );
         return project;
     }

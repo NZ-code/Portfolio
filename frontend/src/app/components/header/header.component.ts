@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  link= 'mailto:zenevichnikita2001@gmail.com';
+  redirectToMail() {
+    window.location.href = this.link;
+  }
 }
+

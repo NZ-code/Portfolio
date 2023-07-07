@@ -1,3 +1,6 @@
 .content-item{
     max-width: 1180px;
 }
+.content-item div{
+    margin-bottom: 200px;
+}

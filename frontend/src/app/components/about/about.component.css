@@ -8,9 +8,16 @@
 }
 .about-text{
     font-family: MontFamily;
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    
+    flex-direction: column;
+}
+.about-text p {
+    margin: 0;
 }
 #about-word{
-    color: #FFF;
+    color: #B354D7;
     font-size: 20px;
     font-family: Mont;
     font-style: normal;
@@ -18,7 +25,9 @@
     line-height: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin: 0;
 }
+
 #developer-word{
     color: #FFF;
     font-size: 64px;

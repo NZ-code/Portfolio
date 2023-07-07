@@ -1,5 +1,5 @@
 export class Project {
-    id:string='0'
+    id:string;
     name:string;
     skills:string[] =[];
     constructor(name:string){

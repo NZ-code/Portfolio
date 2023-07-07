@@ -1,22 +1,30 @@
 package com.zn.portfolio.services;
 
+import com.zn.portfolio.entities.Project;
 import com.zn.portfolio.entities.Skill;
 
 import com.zn.portfolio.exceptions.SkillNotFoundException;
+import com.zn.portfolio.repositories.ProjectRepository;
 import com.zn.portfolio.repositories.SkillRepository;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class SkillService {
 
     private SkillRepository skillRepository;
+    private ProjectRepository projectRepository;
 
     @Autowired
-    public SkillService(SkillRepository skillRepository){
+    public SkillService(SkillRepository skillRepository, ProjectRepository projectRepository){
         this.skillRepository = skillRepository;
+        this.projectRepository = projectRepository;
     }
     public List<Skill> getSkills() {
         return skillRepository.findAll();
@@ -38,5 +46,31 @@ public class SkillService {
     public void updateProject(String id, Skill skill) {
         skill.setId(Long.valueOf(id));
         skillRepository.save(skill);
+    }
+    //-----------------------------------------------
+    public List<Skill> getSkillsByProjectId(String projectId) {
+        Optional<Project> project = projectRepository.findById(Integer.valueOf(projectId));
+
+        if(project.isPresent()){
+            return skillRepository.findAllByProject(project.get());
+        }
+        throw new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "project with this id not found"
+        );
+    }
+
+    public void postSkillByProjectId(Skill skill, String projectId) {
+        Optional<Project> project = projectRepository.findById(Integer.valueOf(projectId));
+
+        if(project.isPresent()){
+            skill.setProject(project.get());
+            skillRepository.save(skill);
+        }
+        else{
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "project with this id not found"
+            );
+        }
+
     }
 }

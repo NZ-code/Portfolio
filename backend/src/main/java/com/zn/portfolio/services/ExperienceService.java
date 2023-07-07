@@ -6,7 +6,9 @@ import com.zn.portfolio.entities.Experience;
 import com.zn.portfolio.repositories.ExperienceRepository;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 @Service
@@ -24,7 +26,9 @@ public class ExperienceService {
 
     public Experience getExperience(String id) {
         return experienceRepository.findById(Integer.valueOf(id))
-                .orElseThrow(() ->  new RuntimeException());
+                .orElseThrow(() ->  new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "this experience not found"
+                ));
     }
 
     public void createExperience(Experience experience) {

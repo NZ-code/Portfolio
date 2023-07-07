@@ -1,12 +1,14 @@
 <div id="projects-section">
-    <p id="projects-header">{{title}}</p>
+    <div id="project-header-section">
+        <p id="projects-header">{{title}}</p>
+    </div>
     <div class="projects-wrapper">
         <div class="projects">
             <div routerLink='/project/{{project.id}}'   class="project" *ngFor = "let project of projects">
                 <img src="assets/img/Case card.png">
                 <div class="project-card-content">
                     <div class="project-skills">
-                        <div class="project-skill" *ngFor="let skill of project.skills">
+                        <div class="project-skill" *ngFor="let skill of project.skills" [ngStyle]="{ 'background-color': getRandomSkillColor(), 'color':'white'}">
                             <p>{{skill}}</p>
                         </div>
                     </div>

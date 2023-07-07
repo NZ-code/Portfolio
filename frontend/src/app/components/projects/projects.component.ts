@@ -33,10 +33,11 @@ export class ProjectsComponent {
     this.projects.push(project3);
   }
   ngOnInit():void{
-    this.projectService.getProjects().subscribe(
-      response =>
-      {this.projects = response}
-    )
+    this.basicInit();
+    // this.projectService.getProjects().subscribe(
+    //   response =>
+    //   {this.projects = response}
+    // )
   };
   getRandomSkillColor(){
     return Colors.getRandomColor();

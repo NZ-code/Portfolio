@@ -20,7 +20,7 @@ html, body {
 
 .content-item{
     grid-column: 2/11;
-    border: 1px solid tan;
+
     display: flex;
     justify-content: center;
 }

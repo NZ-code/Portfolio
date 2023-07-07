@@ -2,12 +2,11 @@
     <p id="skills-header">{{header}}</p>
     <div class="cards-wrapper">
         <div class="cards">
-            <div class="card" *ngFor="let skill of skills">
-                <img src="assets/img/3D=1.png">
-                <p class="card-header">{{skill}}</p>
+            <div class="card" *ngFor="let skill of skills; let i = index;">
+                <img src="assets/img/3D={{i+1}}.png">
+                <p class="card-header">{{skill.name}}</p>
                 <div class="card-text" >
-                    <p>Spring Boot makes it easy to create stand-alone,
-                         production-grade Spring based Applications.</p>
+                    <p>{{skill.description}}</p>
                 </div>
                 
             </div>

@@ -2,6 +2,7 @@ package  com.zn.portfolio.controllers;
 
 import com.zn.portfolio.entities.Experience;
 import com.zn.portfolio.services.ExperienceService;
+import com.zn.portfolio.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +10,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = Constants.CORS)
 public class ExperienceController {
 
     private ExperienceService experienceService;

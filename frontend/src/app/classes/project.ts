@@ -1,9 +1,12 @@
+import { Skill } from "./skill";
 export class Project {
-    id:string='0';
+    id:string;
     name:string;
-    skills:string[] =[];
+    description:string;
+    skills:Skill[] =[];
     constructor(name:string){
         this.name = name;
+        this.skills = [];
     }
     
     

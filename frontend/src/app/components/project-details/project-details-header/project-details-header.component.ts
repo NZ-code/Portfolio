@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Project } from 'src/app/classes/project';
+import { ProjectService } from 'src/app/services/project.service';
+
 
 @Component({
   selector: 'app-project-details-header',
@@ -7,4 +12,24 @@ import { Component } from '@angular/core';
 })
 export class ProjectDetailsHeaderComponent {
   skills:string[] = ["spring", "java","angular"]
+  project:Project;
+  projectId:string;
+  constructor(private projectService:ProjectService,private route: ActivatedRoute){
+    
+  }
+  ngOnInit(){
+    this.route.params.subscribe(params => {
+      this.projectId = params['projectId'];
+      
+      this.projectService.getProjectById(this.projectId).subscribe(
+        data=>{
+          
+          this.project = data;
+        }
+      );
+    });
+
+    
+  }
+  
 }

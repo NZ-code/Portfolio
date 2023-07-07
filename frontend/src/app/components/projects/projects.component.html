@@ -8,8 +8,8 @@
                 <img src="assets/img/Case card.png">
                 <div class="project-card-content">
                     <div class="project-skills">
-                        <div class="project-skill" *ngFor="let skill of project.skills" [ngStyle]="{ 'background-color': getRandomSkillColor(), 'color':'white'}">
-                            <p>{{skill}}</p>
+                        <div class="project-skill" *ngFor="let skill of project.skills; let i = index;" [ngStyle]="{ 'background-color': getRandomSkillColor(i), 'color':'white'}">
+                            <p>{{skill.name}}</p>
                         </div>
                     </div>
                     <p class="project-header">{{project.name}}</p>

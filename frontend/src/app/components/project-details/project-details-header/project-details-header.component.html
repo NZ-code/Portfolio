@@ -1,17 +1,17 @@
 
-<div class="project-details-header">
+<div class="project-details-header" *ngIf="project" >
     <div class="project-img">
         <img src="assets/img/project_cover.png">
     </div>
     <div id="description">
         <div class="project-skills">
-            <div class="project-skill" *ngFor="let skill of skills">
-                <p>{{skill}}</p>
+            <div class="project-skill" *ngFor="let skill of project.skills">
+                <p>{{skill.name}}</p>
             </div>
+            
         </div>
-        <div id="project-name"><p >Devs Porto.</p></div>
-        <div id="project-description"><p>Devs Porto. - projet that was created by me 
-            and famous designer.</p></div>
+        <div id="project-name"><p>{{project.name}}</p></div>
+        <div id="project-description"><p>{{project.description}}</p></div>
         <div id="date">
             <p>10 July 2023</p>
         </div>

@@ -1,13 +1,39 @@
 version: '3'
 
 services:
-  backend:
-    container_name: backend
-    build: /backend
-    ports:
-      - 8080:8080
   frontend:
     container_name: frontend
-    build: /frontend
+    build: frontend
     ports:
       - 80:80
+    networks:
+      - mynetwork
+  database:
+    image: mysql:latest
+    container_name: database
+    restart: always
+    environment:
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - 3306:3306
+    networks:
+      - mynetwork
+
+  backend:
+    container_name: backend
+    build: backend
+    ports:
+      - 8080:8080
+    networks:
+      - mynetwork
+    depends_on:
+      - database
+
+
+    
+networks:
+    mynetwork:
+      driver: bridge

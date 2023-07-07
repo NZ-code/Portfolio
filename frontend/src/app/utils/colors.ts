@@ -7,4 +7,7 @@ export class Colors {
         const randomIndex = Math.floor(Math.random() * this.colors.length);
         return this.colors[randomIndex];
     }
+    static getColorById(index:number):string{
+        return this.colors[index % this.colors.length];
+    }
 }

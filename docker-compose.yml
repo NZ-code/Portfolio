@@ -31,9 +31,6 @@ services:
       - mynetwork
     depends_on:
       - database
-
-
-    
 networks:
     mynetwork:
       driver: bridge

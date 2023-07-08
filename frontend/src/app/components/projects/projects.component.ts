@@ -13,7 +13,6 @@ export class ProjectsComponent {
   title:string = "LATEST PROJECTS";
   projects:Project[] =[];
   constructor(private projectService:ProjectService){
-
   }
   basicInit():void{
 

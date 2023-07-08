@@ -9,7 +9,7 @@ public class Constants {
     public static final String SKILL_ID_PATH_VAR = "skillId";
     public static final String API_SPECIFIC_SKILL_URI = API_SKILLS_URI + "/{"+SKILL_ID_PATH_VAR+"}";
     public static final String FRONTEND_BASE = "http://localhost";
-    public static final String CORS = "http://zenevichmikita.pl/";
+    public static final String CORS = "http://zenevichmikita.pl";
     ;
 
     public static String generatePathVar(String pathVar){

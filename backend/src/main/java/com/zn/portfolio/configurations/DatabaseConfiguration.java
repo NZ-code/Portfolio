@@ -9,18 +9,21 @@ import org.springframework.retry.support.RetryTemplate;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
+import static com.zn.portfolio.utils.Constants.*;
+
 @Configuration
 public class DatabaseConfiguration {
+
     @Autowired
     private RetryTemplate retryTemplate;
 
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://database:3306/mydatabase");
-        dataSource.setUsername("myuser");
-        dataSource.setPassword("mypassword");
+        dataSource.setDriverClassName(DATA_SOURCE_DRIVER);
+        dataSource.setUrl(DATA_SOURCE_URL);
+        dataSource.setUsername(DATA_SOURCE_USER);
+        dataSource.setPassword(DATA_SOURCE_PASSWORD);
 
         try {
             return retryTemplate.execute(context -> {

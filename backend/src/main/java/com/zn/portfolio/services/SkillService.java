@@ -3,10 +3,8 @@ package com.zn.portfolio.services;
 import com.zn.portfolio.entities.Project;
 import com.zn.portfolio.entities.Skill;
 
-import com.zn.portfolio.exceptions.SkillNotFoundException;
 import com.zn.portfolio.repositories.ProjectRepository;
 import com.zn.portfolio.repositories.SkillRepository;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -32,7 +30,7 @@ public class SkillService {
 
     public Skill getSkill(String id) {
         return skillRepository.findById(Integer.valueOf(id))
-                .orElseThrow(() -> new SkillNotFoundException());
+                .orElseThrow(() -> new RuntimeException());
     }
 
     public void createSkill(Skill skill) {

@@ -11,7 +11,6 @@ import java.util.List;
 import static com.zn.portfolio.utils.Constants.*;
 
 @RestController
-@CrossOrigin(origins = Constants.CORS)
 public class ProjectController {
 
     private ProjectService projectService;

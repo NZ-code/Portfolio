@@ -1,3 +1,3 @@
 export class Url {
-    static BASE_URL="http://localhost"
+    static BASE_URL="backend"
 }

@@ -10,7 +10,6 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins = Constants.CORS)
 public class ExperienceController {
 
     private ExperienceService experienceService;

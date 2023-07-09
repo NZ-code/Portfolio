@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.Date;
 import java.util.List;
 
 @Entity
@@ -21,10 +22,11 @@ public class Project {
 
     private String name;
     private String description;
-
+    private Date date;
 
     @OneToMany(mappedBy = "project")
     @JsonManagedReference
     private List<Skill> skills;
+
 
 }

@@ -71,6 +71,24 @@ public class SkillService {
                     HttpStatus.NOT_FOUND, "project with this id not found"
             );
         }
+    }
 
+    public void deleteSkillFromProject(String projectId, String skillId) {
+        skillRepository.deleteById(Integer.valueOf(skillId));
+    }
+
+    public void putSkillByProjectId(Skill skill, String projectId, String skillId) {
+        Optional<Project> project = projectRepository.findById(Integer.valueOf(projectId));
+
+        if(project.isPresent()){
+            skill.setId(Long.valueOf(skillId));
+
+            skillRepository.save(skill);
+        }
+        else{
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "project with this id not found"
+            );
+        }
     }
 }

@@ -1,0 +1,56 @@
+
+<div class="admin-page-content">
+    <div class="new-project-form">
+        <h2>Add new  Project</h2>
+        <form  [formGroup]="newProjectForm" #taskFormRef="ngForm">
+            <label><b>Task:</b></label><br>
+            <mat-form-field appearance="fill">
+                <input matInput #header placeholder="project name..." formControlName="projectName">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+                <mat-label>Description</mat-label>
+                <textarea #description matInput placeholder="project description..." formControlName="projectDescription"></textarea>
+            </mat-form-field>
+            <br>
+            <button mat-flat-button color="primary" (click)="onNewProjectSubmit()">Add</button>
+            <br><br>
+        </form>
+    </div>
+    
+    <div class="projects">
+        <div *ngFor="let project of projects" style="background: #4b4e4e">
+            <div>
+                <p>Name:</p> 
+                <br>
+                <input type="text" [(ngModel)]="project.name" (change)="updateProject(project)">
+              </div>
+              <div>
+                <p>Description:</p>
+                <br>
+                <input type="text" [(ngModel)]="project.description" (change)="updateProject(project)">
+              </div>
+            
+            <div class="skills">
+                <p>Add Skill</p>
+                <input type="text" placeholder="Add Skill" [(ngModel)]="newSkill.name">
+                <button mat-flat-button color="primary"  (click)="addSkillToProject(project)">Add</button>
+                
+                <p>Skills:</p>
+                <div class="skill" *ngFor="let skill of project.skills">
+                    <div>
+                        <p>Skill:</p>
+                        <input type="text" [(ngModel)]="skill.name">
+                        
+                        <button mat-flat-button color="warn" (click)="onDeleteSkillByProject(project.id, skill.id)">Delete Skill</button>
+                      </div>
+                </div>
+            </div>
+            <button mat-flat-button color="warn" (click)="onDeleteProject(project.id)">Delete</button>
+        </div>
+    </div>
+</div>
+
+
+
+

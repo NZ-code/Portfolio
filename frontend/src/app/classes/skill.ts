@@ -1,4 +1,5 @@
 export class Skill {
+    id:string;
     name: string;
     description:string;
     constructor(name:string, description:string){

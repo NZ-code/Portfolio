@@ -12,10 +12,22 @@ export class ProjectService {
   constructor(private http: HttpClient) {
     
    }
+  getUrlId(id:string){
+    return this.apiUrl + '/'+id;
+  }
   getProjects():Observable<Project[]>{
     return this.http.get<Project[]>(this.apiUrl);
   }
   getProjectById(id:string):Observable<Project>{
-    return this.http.get<Project>(this.apiUrl + '/'+id);
+    return this.http.get<Project>(this.getUrlId(id));
+  }
+  save(project:Project){
+    return this.http.post<Project>(this.apiUrl, project);
+  }
+  delete(id:string){
+    return this.http.delete<Project>(this.getUrlId(id));
+  }
+  update(id:string, project:Project){
+    return this.http.put<Project>(this.getUrlId(id), project);
   }
 }

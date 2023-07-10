@@ -1,6 +1,6 @@
 export class Url {
     // local
-    //static BASE_URL="http://localhost"
+    static BASE_URL="http://localhost"
     // docker
-    static BASE_URL="backend"
+    //static BASE_URL="backend"
 }

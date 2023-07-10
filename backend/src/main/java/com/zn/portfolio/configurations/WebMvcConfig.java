@@ -10,7 +10,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Adjust the path pattern according to your API endpoints
-                .allowedOrigins("http://zenevichmikita.pl") // Specify the allowed origin(s) of your Angular app
+                .allowedOrigins("*") // Specify the allowed origin(s) of your Angular app
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Specify the allowed HTTP methods
                 .allowedHeaders("*"); // Specify the allowed headers (or restrict to specific headers)
     }

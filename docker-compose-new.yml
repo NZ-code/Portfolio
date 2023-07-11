@@ -1,13 +1,6 @@
 version: '3'
 
 services:
-  frontend:
-    container_name: frontend
-    build: frontend
-    ports:
-      - 4200:80
-    networks:
-      - mynetwork
   database:
     image: mysql:latest
     container_name: database

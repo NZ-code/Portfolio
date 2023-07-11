@@ -3,7 +3,6 @@ package com.zn.portfolio.controllers;
 
 import com.zn.portfolio.entities.Skill;
 import com.zn.portfolio.services.SkillService;
-import com.zn.portfolio.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +11,7 @@ import java.util.List;
 import static com.zn.portfolio.utils.Constants.*;
 
 @RestController
-
+@CrossOrigin(origins = "*")
 public class SkillController {
 
     private SkillService skillService;

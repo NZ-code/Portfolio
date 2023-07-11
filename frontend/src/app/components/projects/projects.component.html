@@ -4,8 +4,8 @@
     </div>
     <div class="projects-wrapper">
         <div class="projects">
-            <div routerLink='/project/{{project.id}}'   class="project" *ngFor = "let project of projects">
-                <img src="assets/img/Case card.png">
+            <div routerLink='/project/{{project.id}}'   class="project" *ngFor = "let project of projects; let j = index;">
+                <img src="assets/img/project-card{{j+1}}.png">
                 <div class="project-card-content">
                     <div class="project-skills">
                         <div class="project-skill" *ngFor="let skill of project.skills; let i = index;" [ngStyle]="{ 'background-color': getRandomSkillColor(i), 'color':'white'}">

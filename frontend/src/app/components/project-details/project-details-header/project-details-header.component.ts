@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Project } from 'src/app/classes/project';
 import { ProjectService } from 'src/app/services/project.service';
-
+import { Colors } from 'src/app/utils/colors';
 
 @Component({
   selector: 'app-project-details-header',
@@ -28,8 +28,8 @@ export class ProjectDetailsHeaderComponent {
         }
       );
     });
-
-    
   }
-  
+  getRandomSkillColor(id:number){
+    return Colors.getColorById(id);
+  }
 }

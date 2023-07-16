@@ -16,18 +16,7 @@ export class ProjectsComponent {
   }
   basicInit():void{
 
-    var project1 = new Project("Food Service");
 
-    this.projects.push(project1);
-
-    var project2 = new Project("90 Films");
-    
-
-    this.projects.push(project2);
-
-    var project3 = new Project("Bizzare Timer");
-
-    this.projects.push(project3);
   }
   ngOnInit():void{
     //this.basicInit();
